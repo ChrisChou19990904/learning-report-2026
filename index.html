@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>114學年度學習回顧報告 - 你的姓名</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            margin: 0;
+            background-color: #f1f5f9;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 2.5rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--primary); }
+
+        /* Header */
+        header {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+        }
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+        header p { opacity: 0.8; margin-top: 1rem; font-size: 1.1rem; }
+
+        /* Section Layout */
+        section {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding-bottom: 8px;
+        }
+        a{
+            color:blue;
+        }
+        a:visited{
+            color: blue;
+        }
+
+        /* Course Cards */
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .course-card:hover { transform: translateY(-5px); }
+        .course-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tag-container { margin-bottom: 1rem; }
+        .tag {
+            font-size: 0.75rem;
+            background: #dbeafe;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .alert-box {
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            color: #9f1239;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        /* Part 2 Styles */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .experience-grid { grid-template-columns: 1fr; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #1e293b;
+            color: #94a3b8;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>全課程學習回顧報告</h1>
+    <p>資工系學士後專班 | 姓名：<strong>周彥廷</strong> | 學號：<strong>D1397102</strong></p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#courses_this_semester">本學期課程回顧</a></li>
+        <li><a href="#learning_experience">這一年下來的學習經驗</a></li>
+        <li><a href="#plan_after_graduation">畢業規劃</a></li>
+    </ul>
+</nav>
+
+<section id="courses_this_semester">
+    <h2>（第一部分）本學期修課與自學心得</h2>
+
+    <div class="course-card">
+        <div class="course-card" style="border-left-color: #10b981;">
+            <h3>專案管理 (外語學習書電商網站)</h3>
+            <div class="project-tag">#Full-stack #Ecommerce #IndependentDevelopment</div>
+            <p>這是我投入最多心力的實作專案。我獨立完成了具備前、後台完整閉環的電商系統，包含 14 國語言分類與多重關鍵字（ISBN、作者、書名）搜尋功能。</p>
+            <p><strong>技術突破：</strong> 即使在開發過程中遇到權限控制與資料格式的細微瑕疵，但成功實作「購物車」與「後台訂單追蹤」的核心商務邏輯，為我奠定了全端開發的信心。</p>
+        </div>
+
+        <h3>軟體品質與測試 / 程式設計實務</h3>
+        <div class="project-tag">#QA #Testing #SoftwareLifecycle #LogicTransformation</div>
+        <p>這門課讓我對「開發」與「測試」的關係有了全新的認識。我以自研的「<a href="https://foreign-languages-book.vercel.app/" target="_blank">外語學習書電商系統</a>」作為測試對象，成功定位並修正了多項邏輯漏洞。</p>
+        <ul>
+            <li><strong>功能進化：</strong> 在測試過程中，我補足了原先缺失的「價格驗證」與「書名驗證」，並在 Demo 時向教授展示了包含 14 種語系分類的搜尋機制與完整支付流程，獲得高度肯定。</li>
+            <li><strong>思維轉型：</strong> 我領悟到程式學習的兩個階段：從初期的手刻 I/O（Python input/Java Scanner）訓練邏輯，到後期系統開發中 I/O 轉化為「測試驗證」的工具。這是我從學生轉向開發者的關鍵轉折。</li>
+        </ul>
+    </div>
+
+    <div class="course-card">
+        <h3>軟體專題製作 (大型家具回收線上申請系統)</h3>
+        <div class="project-tag">#Teamwork #BackendAdmin #SecurityAwareness</div>
+        <p>與組員合力開發具備社會公益性的系統。雖然在 Line 註冊功能的邏輯串接遇到瓶頸，但我隨即調整定位，專注於後台管理模組的開發。</p>
+        <ul>
+            <li><strong>核心貢獻：</strong> 成功實作案件核准、派車調度及站點狀態修改等後台邏輯。</li>
+            <li><strong>安全性反思：</strong> 雖然功能正常跑通，但我主動發現了 `is_admin` 權限未初始化的漏洞。這讓我明白「功能完整」只是基礎，「系統安全」才是專業軟體的紅線，這是我在個人實作分中最深刻的體悟。</li>
+        </ul>
+    </div>
+
+
+    <div class="course-card">
+        <h3>iOS APP 開發</h3>
+        <div class="project-tag">#SwiftUI #Localization #KnowledgeMigration</div>
+        <p>本學期將先前的網頁作品「日文助詞教學」成功轉譯為 iOS 版本。我發現 Swift 的 UI 結構雖不像 HTML 直觀，但其強大的型別檢查與邏輯控制，能更穩定地實現測驗計分與導航功能。</p>
+        <p><strong>國際化經驗：</strong> 透過實作支援中、英、日三語系的旅遊推薦 App，我理解了 iOS 原生語系資源檔（Localization）的運作原理，掌握了跨平台開發的思維方式。</p>
+    </div>
+
+    <div class="course-card">
+        <h3>人工智慧物聯網 (C++ & Arduino)</h3>
+        <div class="project-tag">#C++ #IoT #Firmware #Vision Expansion</div>
+        <p>這門課開啟了我對「韌體」與「軟硬整合」的認識。雖然在硬體電路實作與燈泡控制邏輯上仍有進步空間，但這讓我體會到硬體開發對精準度的極高要求。</p>
+        <p><strong>視野拓展：</strong> 透過期末報告「家庭成員身分辨識系統」，以及觀察同學的「自動灌溉系統」，我驚訝於 Arduino 應用的廣度。儘管課程僅觸及皮毛，但已讓我深刻見識到韌體開發在自動化領域的厲害之處。</p>
+    </div>
+</section>
+
+<section id="learning_experience">
+    <h2>（第二部分）專班學習經驗與感想</h2>
+    <div class="experience-grid">
+        <div>
+            <h3>持續產出的學習習慣</h3>
+            <p>在逢甲資工專班這一年，我養成了一個對職涯極有幫助的習慣：<strong>將所學知識「產品化」</strong>。自從學會部署 GitHub Pages 後，我便將感興趣的主題（如日文教學）或擅長的領域（音樂表演），透過編寫 HTML 轉化為互動式的教學與測驗頁面，目前已累積多個公開專案，這不僅是學習記錄，更是實力的實體展示。</p>
+        </div>
+        <div>
+            <h3>全端技術與部署架構的深度掌握</h3>
+            <p>這一年我掌握了 <strong>Spring Boot (IntelliJ IDEA)</strong> 與 <strong>Vue 3 (WebStorm)</strong> 的開發技術，深刻理解「前後端分離」的原理。更重要的是，我學會了根據系統特性選擇部署策略：對於靜態內容使用 GitHub Pages，而對於需要後端支援的電商系統，我則成功實作了 <strong>Docker 容器化部署</strong>，確保了環境的一致性與系統的可擴充性。</p>
+        </div>
+    </div>
+
+
+
+    <div class="course-card" style="background: #fdfefe; border-left: 4px solid var(--primary);">
+        <h4>💡 技術與學科的跨界整合</h4>
+        <p>我充分利用網頁技術來輔助語言學習與技術筆記的整理：</p>
+        <ul>
+            <li><strong><a href="https://chrischou19990904.github.io/JLPT_N3/" target="_blank">日文教學系統</a>：</strong> 儘管日文檢定為 N3，但我透過 15 個獨立 HTML 頁面，將所學內容系統化。iOS 專題中的「助詞教學」便是從此龐大架構中萃取並轉譯而來。</li>
+            <li><strong><a href="https://chrischou19990904.github.io/Spring_Boot_Annotation/" target="_blank">技術文檔庫</a>：</strong> 針對 Spring Boot、Vue 3 與 Docker 的學習心得，我也獨立開發了包含 14 個 HTML 頁面的 GitHub Pages 專案，展現了我對技術細節的鑽研精神。</li>
+            <li><strong><a href="https://chrischou19990904.github.io/Marimba_App_Introduction/" target="_blank">數位樂器使用心得</a>：</strong>針對Perfect Piano與Marimba Real這兩款App的使用心得，我開發了包含 15 個 HTML 頁面的 GitHub Pages 專案，展現我的音樂演奏水平和跨領域的深入知識。</li>
+        </ul>
+    </div>
+</section>
+
+<section id="plan_after_graduation">
+    <h2>（第三部分）畢業後的規劃</h2>
+    <div class="course-card" style="border-top: 4px solid var(--success);">
+        <p>基於這一年的紮實訓練與自學成果，我對未來有清晰的佈局：</p>
+        <ol>
+            <li><strong>全端工程師之路：</strong> 持續深耕 Spring Boot 與 Vue 3 生態系。針對實作中遇到的權限安全與容器管理（Docker）進行深度補強，並將解決 `is_admin` 漏洞的開發經驗轉化為防禦性編程的基礎，朝向專業 Full-Stack Developer 邁進。</li>
+            <li><strong>維持開源精神與雲端佈署：</strong> 繼續經營我的 GitHub Pages 技術文檔，並進一步學習雲端服務（如 AWS/GCP）與 Docker Compose 容器編排，將複雜的技術知識轉化為易懂的教學網頁。</li>
+            <li><strong>語言與技術雙修：</strong> 持續精進日文，希望能將「全端開發技術」、「容器化部署能力」與「外語優勢」結合，未來爭取跨國專案或日系外資企業的技術職位。</li>
+        </ol>
+    </div>
+</section>
+
+<footer>
+    <p>114學年度全課程學習回顧報告 | 姓名：周彥廷</p>
+    <p>本報告使用 HTML/CSS 撰寫並部署於 GitHub Pages</p>
+</footer>
+
+</body>
+</html>
