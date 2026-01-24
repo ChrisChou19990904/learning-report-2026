@@ -23,6 +23,25 @@
             margin: 0;
             background-color: #f1f5f9;
         }
+        #social-share a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #social-share a:hover {
+            text-decoration: underline;
+        }
+        #social-share span {
+            margin: 0 5px;
+        }
+        #social-share a#fb-share {
+            color: #4267B2;
+        }
+        #social-share a#line-share {
+            color: #00C300;
+        }
+        #social-share a#twitter-share {
+            color: #1DA1F2;
+        }
 
         /* Navigation */
         nav {
@@ -43,13 +62,13 @@
             gap: 2.5rem;
         }
         nav a {
-            text-decoration: none;
+            text-decoration: underline;
             color: var(--secondary);
             font-weight: 600;
             transition: color 0.3s;
         }
         nav a:hover { color: var(--primary); }
-
+        nav a:visited { color: var(--secondary); }
         /* Header */
         header {
             padding: 5rem 2rem;
@@ -137,6 +156,9 @@
         }
         @media (max-width: 768px) {
             .experience-grid { grid-template-columns: 1fr; }
+            img{
+                max-width: 100%;
+            }
         }
 
         footer {
@@ -149,7 +171,21 @@
     </style>
 </head>
 <body>
-
+<div id="google-translate-box">
+    <div id="google_translate_element"></div>
+    <!-- Google Translate 的自動翻譯功能 -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'zh-TW',  // 頁面原語言
+                includedLanguages: 'en,es,fr,de,it,zh-CN,ja,ko,th,vi,my,zh-TW,id,ms,ar,he,ru,tg,uk,hi,tr,pt,nl,is,fi,sv,no,ro,kk,bo,mn,la,fil,tl,el',  // 支援的翻譯語言（可擴展）
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <p>點擊上方的語言選單以切換語言</p>
+</div>
 <header>
     <h1>全課程學習回顧報告</h1>
     <p>資工系學士後專班 | 姓名：<strong>周彥廷</strong> | 學號：<strong>D1397102</strong></p>
@@ -245,6 +281,40 @@
         </ol>
     </div>
 </section>
+<ul id="messages"></ul>
+<div id="social-share" style="margin-top: 20px;">
+    <a id="fb-share" href="#" target="_blank" style="color: #4267B2; font-weight: bold;">分享到 Facebook</a>
+    <span> | </span>
+    <a id="line-share" href="#" target="_blank" style="color: #00C300; font-weight: bold;">分享到 Line</a>
+    <span> | </span>
+    <a id="twitter-share" href="#" target="_blank" style="color: #1DA1F2; font-weight: bold;">分享到 X</a>
+</div>
+<script>
+    // 自動抓取當前頁面的 URL
+    var currentUrl = window.location.href;
+    // Facebook 分享
+    document.getElementById("fb-share").href =
+        "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+    // Line 分享
+    document.getElementById("line-share").href =
+        "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(currentUrl);
+    // X (Twitter) 分享
+    document.getElementById("twitter-share").href =
+        "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentUrl) + "&text=你的文章標題";
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v17.0" nonce="yourNonce">
+</script>
+<div class="fb-comments"
+     data-href="https://chrischou19990904.github.io/harp_app_introduction"
+     data-width="100%"
+     data-numposts="5">
+</div>
+作者：<a class="the_author_of_the_web" href="https://www.facebook.com/profile.php?id=100056441813114&locale=zh_TW" target="_blank" style="color:blue;text-decoration: underline">周彥廷</a>
+    <br>創作日期：西元二零二六年一月十三日<br>
+    <img src="理平頭.jpg" alt="自拍">
+    <br>
 
 <footer>
     <p>114學年度全課程學習回顧報告 | 姓名：周彥廷</p>
